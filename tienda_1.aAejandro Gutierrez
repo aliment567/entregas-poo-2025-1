@@ -1,0 +1,115 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOrJvlZFNWL+8XbQObhH9O1",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/aliment567/entregas-poo-2025-1/blob/main/tienda_1.aAejandro%20Gutierrez\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Definición de la clase Producto\n",
+        "class Producto:\n",
+        "    def __init__(self, nombre, precio, cantidad):\n",
+        "        self.nombre = nombre\n",
+        "        self.precio = precio\n",
+        "        self.cantidad = cantidad\n",
+        "\n",
+        "\n",
+        "productos = [\n",
+        "    Producto(\"pan\", 2000, 10),\n",
+        "    Producto(\"leche\", 5000, 15),\n",
+        "    Producto(\"huevos\", 500, 200)\n",
+        "]\n",
+        "# Bucle para poder interactuar con el usuario\n",
+        "while True:\n",
+        "    consulta = input(\"¿Qué deseas saber? (producto 1, producto 2, producto 3, precio 1, precio 2, precio 3, cantidad 1, cantidad 2, cantidad 3, salir): \").lower()\n",
+        "   # Responde con el nombre del producto, el precio y la cantidad correspondiente de cada producto\n",
+        "    if consulta == \"producto 1\":\n",
+        "        print(f\"El producto 1 es: {productos[0].nombre}\")\n",
+        "    elif consulta == \"producto 2\":\n",
+        "        print(f\"El producto 2 es: {productos[1].nombre}\")\n",
+        "    elif consulta == \"producto 3\":\n",
+        "        print(f\"El producto 3 es: {productos[2].nombre}\")\n",
+        "    elif consulta == \"precio del producto 1\":\n",
+        "        print(f\"El precio del {productos[0].nombre} es de: {productos[0].precio} pesos\")\n",
+        "    elif consulta == \"precio 2\":\n",
+        "        print(f\"El precio de la {productos[1].nombre} es de: {productos[1].precio} pesos\")\n",
+        "    elif consulta == \"precio 3\":\n",
+        "        print(f\"El precio de los {productos[2].nombre} es de: {productos[2].precio} pesos\")\n",
+        "    elif consulta == \"cantidad 1\":\n",
+        "        print(f\"La cantidad del {productos[0].nombre} es de: {productos[0].cantidad} unidades\")\n",
+        "    elif consulta == \"cantidad 2\":\n",
+        "        print(f\"La cantidad de la {productos[1].nombre} es de: {productos[1].cantidad} unidades\")\n",
+        "    elif consulta == \"cantidad 3\":\n",
+        "        print(f\"La cantidad de los {productos[2].nombre} es de: {productos[2].cantidad} unidades\")\n",
+        "    elif consulta == \"salir\":\n",
+        "        break\n",
+        "    else:\n",
+        "        print(\"Comando no reconocido.\")\n",
+        "# Muestra un resumen del inventario en forma de tabla\n",
+        "print(\"\\nResumen:\")\n",
+        "print(\"|Producto |Cantidad     |Precio     |\")\n",
+        "print(\"|---------|------------|-----------|\")\n",
+        "for producto in productos:\n",
+        "    print(producto.mostrar_info())\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 425
+        },
+        "id": "WWnIiZhzD8Vt",
+        "outputId": "b3339b6b-2eb4-4edc-b4d7-f1345a3413b9"
+      },
+      "execution_count": 34,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "¿Qué deseas saber? (producto 1, producto 2, producto 3, precio 1, precio 2, precio 3, cantidad 1, cantidad 2, cantidad 3, salir): cantidad 2\n",
+            "La cantidad de la leche es de: 15 unidades\n",
+            "¿Qué deseas saber? (producto 1, producto 2, producto 3, precio 1, precio 2, precio 3, cantidad 1, cantidad 2, cantidad 3, salir): cantidad 2\n",
+            "La cantidad de la leche es de: 15 unidades\n"
+          ]
+        },
+        {
+          "output_type": "error",
+          "ename": "KeyboardInterrupt",
+          "evalue": "Interrupted by user",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-34-5eac898d6084>\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m     16\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     17\u001b[0m \u001b[0;32mwhile\u001b[0m \u001b[0;32mTrue\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 18\u001b[0;31m     \u001b[0mconsulta\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"¿Qué deseas saber? (producto 1, producto 2, producto 3, precio 1, precio 2, precio 3, cantidad 1, cantidad 2, cantidad 3, salir): \"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mlower\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     19\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     20\u001b[0m     \u001b[0;32mif\u001b[0m \u001b[0mconsulta\u001b[0m \u001b[0;34m==\u001b[0m \u001b[0;34m\"producto 1\"\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.11/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36mraw_input\u001b[0;34m(self, prompt)\u001b[0m\n\u001b[1;32m   1175\u001b[0m                 \u001b[0;34m\"raw_input was called, but this frontend does not support input requests.\"\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1176\u001b[0m             )\n\u001b[0;32m-> 1177\u001b[0;31m         return self._input_request(\n\u001b[0m\u001b[1;32m   1178\u001b[0m             \u001b[0mstr\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mprompt\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1179\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_parent_ident\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m\"shell\"\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.11/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36m_input_request\u001b[0;34m(self, prompt, ident, parent, password)\u001b[0m\n\u001b[1;32m   1217\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1218\u001b[0m                 \u001b[0;31m# re-raise KeyboardInterrupt, to truncate traceback\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1219\u001b[0;31m                 \u001b[0;32mraise\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Interrupted by user\"\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32mfrom\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1220\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mException\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1221\u001b[0m                 \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mlog\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mwarning\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Invalid Message:\"\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mexc_info\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mTrue\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m: Interrupted by user"
+          ]
+        }
+      ]
+    }
+  ]
+}
